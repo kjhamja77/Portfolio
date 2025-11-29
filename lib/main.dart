@@ -103,8 +103,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
               ListTile(
                 leading: const Icon(Icons.location_on_outlined,color: Colors.white60,),
                 title: const Text('Location',style: TextStyle(color: Colors.white),),
-                subtitle: const Text('Thanjavur, TamilNadu',style: TextStyle(color: Colors.white60)),
-                onTap: () => _openUrl('https://www.google.com/maps'),
+                subtitle: const Text('Bur Dubai, Dubai',style: TextStyle(color: Colors.white60)),
+                onTap: () => _openUrl('https://maps.app.goo.gl/UXx5hs7EMRndSEkq9'),
               ),
               SizedBox(height: 10,),
               Row(
@@ -138,11 +138,6 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                       ),
                     ),
                   ),
-                  // IconButton(
-                  //   tooltip: 'X',
-                  //   onPressed: () => _openUrl('https://x.com/'),
-                  //   icon: const Icon(Icons.chat_bubble_outline),
-                  // ),
                 ],
               ),
               SizedBox(height: 15,),
@@ -176,7 +171,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
           // 🔹 Logo + Title
           Row(
             children: [
-              const SizedBox(width: 10),
+              Image.asset("assets/kjh_logo.png",height: 50,width: 50,fit: BoxFit.cover,),
+              SizedBox(width: 10,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -372,7 +368,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                          onPressed: () => _openUrl('https://drive.google.com/file/d/1slKS8k9pisqSYosjiN6Mh2Ua-se0WA67/view?usp=sharing'),
+                          onPressed: () => _openUrl('https://drive.google.com/file/d/11NhmTLm-KFSsucuGVnqShRCXU1YnLG5z/view?usp=sharing'),
                           icon: const Icon(Icons.download_outlined, size: 20),
                           label: const Text('Download CV', style: TextStyle(fontSize: 16)),
                         ),
