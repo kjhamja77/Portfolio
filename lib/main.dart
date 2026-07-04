@@ -368,7 +368,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                          onPressed: () => _openUrl('https://drive.google.com/file/d/11NhmTLm-KFSsucuGVnqShRCXU1YnLG5z/view?usp=sharing'),
+                          onPressed: () => _openUrl('https://drive.google.com/file/d/1Wl1-QgsCWHMgscu208e4FKPpJtibAiy9/view?usp=sharing'),
                           icon: const Icon(Icons.download_outlined, size: 20),
                           label: const Text('Download CV', style: TextStyle(fontSize: 16)),
                         ),
@@ -554,6 +554,16 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
   Widget _resumeSection() {
 
     final experiences = [
+      {
+        'title': 'Mobile Application Developer',
+        'company': 'Borderless Security FZCO',
+        'duration': 'Jan 2026 – Present',
+        'points': [
+          'Developed and maintained four enterprise Flutter applications: **Kardosi** (e-commerce), **Estate Hub** (real estate), and **FilesDNA** & **FilesDNA HR** (ERP modules for document and HR management).',
+          'Integrated REST APIs, built reusable components, optimized performance, and resolved production issues while collaborating within Agile teams.',
+          'Implemented and customized ERP modules for FilesDNA and FilesDNA HR using **Claude Code** and **ChatGPT**, accelerating development, improving code quality, and streamlining implementation.'
+        ],
+      },
       {
         'title': 'Mobile Application Developer',
         'company': 'Inspire Clean Energy Private Limited',
@@ -799,6 +809,99 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
 
   Widget _portfolioSection() {
     final projects = [
+      {
+        'title': 'Kardosi',
+        'subtitle': 'E-Commerce Application',
+        'tagline': 'Shop smarter. Sell faster. All in one app.',
+        'description':
+        'A Flutter-based e-commerce mobile application with REST API integration, delivering a seamless shopping experience with reusable UI components and optimized performance.',
+        'brief': "Kardosi is an enterprise e-commerce mobile application built with Flutter, designed to deliver a smooth and reliable shopping experience across Android and iOS. The app integrates REST APIs for real-time product, order, and inventory data, with a focus on reusable UI components, optimized performance, and quick resolution of production issues. Built and maintained within an Agile team, Kardosi ensures a consistent, scalable, and user-friendly shopping journey from browsing to checkout.",
+        'image': 'assets/kardosi.png',
+        'screenshots': [
+          'assets/screenshots/Kardosi1.jpeg',
+          'assets/screenshots/Kardosi2.jpeg',
+          'assets/screenshots/Kardosi3.jpeg',
+          'assets/screenshots/Kardosi4.jpeg',
+          'assets/screenshots/Kardosi5.jpeg',
+          'assets/screenshots/Kardosi6.jpeg',
+          'assets/screenshots/Kardosi7.jpeg',
+          'assets/screenshots/Kardosi8.jpeg',
+        ],
+        'techStack': ['assets/flutter.png','assets/RestAPI.png','assets/git.png','assets/postman.png'],
+        'github': '',
+        'playstore': '',
+        'appstore': '',
+      },
+
+      {
+        'title': 'Estate Hub',
+        'subtitle': 'Real Estate Application',
+        'tagline': 'Find. List. Manage properties with ease.',
+        'description':
+        'A Flutter-based real estate application with REST API integration, enabling property listing, search, and management for a streamlined real estate experience.',
+        'brief': "Estate Hub is an enterprise real estate mobile application developed with Flutter, built to simplify property listing, search, and management. It integrates REST APIs for real-time property data, offering users a smooth browsing and management experience with reusable, well-optimized UI components. The app was developed and maintained as part of a suite of enterprise applications, with an emphasis on performance, reliability, and Agile-driven feature delivery.",
+        'image': 'assets/estate_hub.png',
+        'screenshots': [
+          'assets/screenshots/estatehub_pic1.jpeg',
+          'assets/screenshots/estatehub_pic2.jpeg',
+          'assets/screenshots/estatehub_pic3.jpeg',
+          'assets/screenshots/estatehub_pic4.jpeg',
+          'assets/screenshots/estatehub_pic5.jpeg',
+          'assets/screenshots/estatehub_pic6.jpeg',
+          'assets/screenshots/estatehub_pic7.jpeg',
+          'assets/screenshots/estatehub_pic8.jpeg'
+        ],
+        'techStack': ['assets/flutter.png','assets/RestAPI.png','assets/git.png','assets/postman.png'],
+        'github': '',
+        'playstore': '',
+        'appstore': '',
+      },
+
+      {
+        'title': 'FilesDNA',
+        'subtitle': 'ERP Application',
+        'tagline': 'Organize. Track. Manage documents effortlessly.',
+        'description':
+        'A Flutter-based ERP module application for document management, built with REST API integration and AI-assisted development for faster, higher-quality delivery.',
+        'brief': "FilesDNA is an enterprise ERP module application built with Flutter for streamlined document management. The app integrates REST APIs for real-time data synchronization and was developed with the support of AI-assisted tools, including Claude Code and ChatGPT, to accelerate development, improve code quality, and streamline implementation. FilesDNA focuses on reliable performance, reusable components, and a clean interface for managing enterprise documentation workflows.",
+        'image': 'assets/filesdna.png',
+        'screenshots': [
+          'assets/screenshots/filesdna1.jpeg',
+          'assets/screenshots/filesdna2.jpeg',
+          'assets/screenshots/filesdna3.jpeg',
+          'assets/screenshots/filesdna4.jpeg',
+          'assets/screenshots/filesdna5.jpeg',
+          'assets/screenshots/filesdna6.jpeg',
+          'assets/screenshots/filesdna7.jpeg',
+        ],
+        'techStack': ['assets/flutter.png','assets/RestAPI.png','assets/git.png','assets/postman.png'],
+        'github': '',
+        'playstore': '',
+        'appstore': '',
+      },
+
+      {
+        'title': 'FilesDNA HR',
+        'subtitle': 'ERP Application',
+        'tagline': 'Simplify HR operations, one module at a time.',
+        'description':
+        'A Flutter-based ERP module application for HR and workforce management, built alongside FilesDNA with REST API integration and AI-assisted development.',
+        'brief': "FilesDNA HR is a companion ERP module application to FilesDNA, developed with Flutter to handle HR and workforce management functions for enterprise clients. The app integrates REST APIs for real-time HR data and was built using AI-assisted development tools, including Claude Code and ChatGPT, to accelerate implementation and maintain high code quality. FilesDNA HR emphasizes performance, reusability, and a consistent user experience across the ERP suite.",
+        'image': 'assets/filesdna_hr.png',
+        'screenshots': [
+          'assets/screenshots/filesdnahr1.jpeg',
+          'assets/screenshots/filesdnahr2.jpeg',
+          'assets/screenshots/filesdnahr3.jpeg',
+          'assets/screenshots/filesdnahr4.jpeg',
+          'assets/screenshots/filesdnahr5.jpeg',
+          'assets/screenshots/filesdnahr6.jpeg',
+          'assets/screenshots/filesdnahr7.jpeg',
+        ],
+        'techStack': ['assets/flutter.png','assets/RestAPI.png','assets/git.png','assets/postman.png'],
+        'github': '',
+        'playstore': '',
+        'appstore': '',
+      },
       {
         'title': 'Eira',
         'subtitle': 'Application',
