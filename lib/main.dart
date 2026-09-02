@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       scrollBehavior: WebScrollBehavior(),
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Halith Hamja',
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
@@ -73,7 +73,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFF0A0A23),Colors.black12],
+              colors: [Color(0xFF131347),Colors.white12],
             ),
           ),
           child: Column(
@@ -98,7 +98,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                 leading: const Icon(Icons.phone_outlined,color: Colors.white60),
                 title: const Text('Phone - UAE',style: TextStyle(color: Colors.white),),
                 subtitle: const Text('+971 58 841 0143',style: TextStyle(color: Colors.white60)),
-                // onTap: () => _openUrl('https://wa.me/+917695818144'),
+                onTap: () => _openUrl('https://wa.me/+971588410143'),
               ),
               ListTile(
                 leading: const Icon(Icons.location_on_outlined,color: Colors.white60,),
@@ -251,172 +251,717 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
 
 
 
+  // Widget _heroSection(double width) {
+  //   final isSmall = width < 900;
+  //
+  //   return Container(
+  //     width: double.infinity,
+  //     padding: EdgeInsets.symmetric(horizontal: isSmall ? 20 : 80, vertical: isSmall ? 60 : 100),
+  //
+  //     decoration: const BoxDecoration(
+  //       gradient: LinearGradient(
+  //         begin: Alignment.topLeft,
+  //         end: Alignment.bottomRight,
+  //         colors: [Color(0xFF0A0A23),Colors.black],
+  //       ),
+  //     ),
+  //     child: Column(
+  //       crossAxisAlignment: CrossAxisAlignment.center,
+  //       children: [
+  //         Flex(
+  //           direction: isSmall ? Axis.vertical : Axis.horizontal,
+  //           mainAxisAlignment: MainAxisAlignment.center,
+  //           crossAxisAlignment:
+  //           CrossAxisAlignment.center,
+  //           children: [
+  //             // LEFT SIDE - Text Section
+  //             Column(
+  //               mainAxisAlignment: MainAxisAlignment.end,
+  //               crossAxisAlignment:
+  //               isSmall ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+  //               children: [
+  //                 const Text(
+  //                   '👋 Hello, I’m',
+  //                   style: TextStyle(color: Colors.white70, fontSize: 18),
+  //                 ),
+  //                 const SizedBox(height: 8),
+  //                 Text(
+  //                   'Halith Hamja',
+  //                   style: TextStyle(
+  //                     fontSize: isSmall ? 34 : 52,
+  //                     fontWeight: FontWeight.bold,
+  //                     color: Colors.indigoAccent,
+  //                   ),
+  //                 ),
+  //                 const SizedBox(height: 8),
+  //
+  //                 AnimatedTextKit(
+  //                   repeatForever: true,
+  //                   animatedTexts: [
+  //                     TypewriterAnimatedText(
+  //                       'Flutter Developer',
+  //                       textStyle: TextStyle(
+  //                         color: Colors.white,
+  //                         fontSize: isSmall ? 20 : 24,
+  //                         fontWeight: FontWeight.w500,
+  //                       ),
+  //                       speed: const Duration(milliseconds: 90),
+  //                     ),
+  //                     TypewriterAnimatedText(
+  //                       'Mobile App Engineer (Kotlin | Flutter)',
+  //                       textStyle: TextStyle(
+  //                         color: Colors.white,
+  //                         fontSize: isSmall ? 20 : 24,
+  //                         fontWeight: FontWeight.w500,
+  //                       ),
+  //                       speed: const Duration(milliseconds: 90),
+  //                     ),
+  //                     TypewriterAnimatedText(
+  //                       'Building seamless cross-platform apps 🚀',
+  //                       textStyle: TextStyle(
+  //                         color: Colors.white,
+  //                         fontSize: isSmall ? 20 : 24,
+  //                         fontWeight: FontWeight.w500,
+  //                       ),
+  //                       speed: const Duration(milliseconds: 90),
+  //                     ),
+  //                     TypewriterAnimatedText(
+  //                       'Building seamless Native apps 🚀',
+  //                       textStyle: TextStyle(
+  //                         color: Colors.white,
+  //                         fontSize: isSmall ? 20 : 24,
+  //                         fontWeight: FontWeight.w500,
+  //                       ),
+  //                       speed: const Duration(milliseconds: 90),
+  //                     ),
+  //                   ],
+  //                 ),
+  //
+  //                 const SizedBox(height: 28),
+  //
+  //                 SizedBox(
+  //                   width: isSmall ? double.infinity : null,
+  //                   child: Wrap(
+  //                     alignment:
+  //                     isSmall ? WrapAlignment.center : WrapAlignment.start,
+  //                     spacing: 12,
+  //                     runSpacing: 12,
+  //                     children: [
+  //                       ElevatedButton.icon(
+  //                         style: ElevatedButton.styleFrom(
+  //                           backgroundColor: Colors.indigoAccent,
+  //                           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+  //                           shape: RoundedRectangleBorder(
+  //                             borderRadius: BorderRadius.circular(10),
+  //                           ),
+  //                         ),
+  //                         onPressed: () => _openUrl('mailto:kjhamja77@gmail.com'),
+  //                         icon: const Icon(Icons.email_outlined, size: 20,color: Colors.white,),
+  //                         label: const Text('Contact Me', style: TextStyle(fontSize: 16,color: Colors.white)),
+  //                       ),
+  //                       OutlinedButton.icon(
+  //                         style: OutlinedButton.styleFrom(
+  //                           side: const BorderSide(color: Colors.indigoAccent),
+  //                           foregroundColor: Colors.white,
+  //                           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+  //                           shape: RoundedRectangleBorder(
+  //                             borderRadius: BorderRadius.circular(10),
+  //                           ),
+  //                         ),
+  //                         onPressed: () => _openUrl('https://drive.google.com/file/d/13tbm5Ayzp9X-QU8t62CzbjBV459Xm8D_/view?usp=sharing'),
+  //                         icon: const Icon(Icons.download_outlined, size: 20),
+  //                         label: const Text('Download CV', style: TextStyle(fontSize: 16)),
+  //                       ),
+  //                     ],
+  //                   ),
+  //                 ),
+  //               ],
+  //             ),
+  //
+  //             SizedBox(width: isSmall ? 0 : 60, height: isSmall ? 40 : 0),
+  //
+  //             if (!isSmall)
+  //               Flexible(
+  //                 flex: 1,
+  //                 child: Center(
+  //                   child: AnimatedContainer(
+  //                     duration: const Duration(milliseconds: 600),
+  //                     height: 350,
+  //                     width: 420,
+  //                     decoration: BoxDecoration(
+  //                       borderRadius: BorderRadius.circular(20),
+  //                       boxShadow: [
+  //                         BoxShadow(
+  //                           color: Colors.indigoAccent.withValues(alpha: 0.3),
+  //                           blurRadius: 30,
+  //                           spreadRadius: 2,
+  //                         ),
+  //                       ],
+  //                     ),
+  //                     child:
+  //                     ClipRRect(
+  //                       borderRadius: BorderRadius.circular(20),
+  //                       child:
+  //                       Image.asset(
+  //                         "assets/profile.png",
+  //                          fit: BoxFit.cover,
+  //                         errorBuilder: (c, _, __) => Container(color: Colors.grey[900]),
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ),
+  //           ],
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
+
   Widget _heroSection(double width) {
-    final isSmall = width < 900;
+    final bool isMobile = width < 800;
+    final bool isTablet = width >= 800 && width < 1150;
+
+    const Color background = Color(0xFF030511);
+    const Color primaryBlue = Color(0xFF536DFF);
+    const Color primaryPurple = Color(0xFF814DFF);
+    const Color white = Color(0xFFF5F6FF);
+    const Color muted = Color(0xFFAAAFBF);
 
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: isSmall ? 20 : 80, vertical: isSmall ? 60 : 100),
-
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Color(0xFF0A0A23),Colors.black],
+          colors: [
+            Color(0xFF08091E),
+            Color(0xFF030511),
+            Color(0xFF010208),
+          ],
         ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Flex(
-            direction: isSmall ? Axis.vertical : Axis.horizontal,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment:
-            CrossAxisAlignment.center,
-            children: [
-              // LEFT SIDE - Text Section
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment:
-                isSmall ? CrossAxisAlignment.center : CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    '👋 Hello, I’m',
-                    style: TextStyle(color: Colors.white70, fontSize: 18),
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: isMobile
+              ? 24
+              : isTablet
+              ? 45
+              : 78,
+          vertical: isMobile ? 55 : 65,
+        ),
+        child: isMobile
+            ? Column(
+          children: [
+            // =========================================================
+            // MOBILE TEXT
+            // =========================================================
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // Hello
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 9,
                   ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'Halith Hamja',
-                    style: TextStyle(
-                      fontSize: isSmall ? 34 : 52,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.indigoAccent,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF090D24),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: primaryPurple.withValues(alpha: 0.5),
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  child: const Text(
+                    "👋 Hello, I'm",
+                    style: TextStyle(
+                      color: white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
 
-                  AnimatedTextKit(
-                    repeatForever: true,
-                    animatedTexts: [
-                      TypewriterAnimatedText(
-                        'Flutter Developer',
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: isSmall ? 20 : 24,
-                          fontWeight: FontWeight.w500,
+                const SizedBox(height: 22),
+
+                // Name
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      const TextSpan(
+                        text: 'Halith ',
+                        style: TextStyle(
+                          color: white,
+                          fontSize: 43,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: -1.5,
                         ),
-                        speed: const Duration(milliseconds: 90),
                       ),
-                      TypewriterAnimatedText(
-                        'Mobile App Engineer (Kotlin | Flutter)',
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: isSmall ? 20 : 24,
-                          fontWeight: FontWeight.w500,
+                      TextSpan(
+                        text: 'Hamja',
+                        style: TextStyle(
+                          fontSize: 43,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: -1.5,
+                          foreground: Paint()
+                            ..shader = const LinearGradient(
+                              colors: [
+                                primaryPurple,
+                                primaryBlue,
+                              ],
+                            ).createShader(
+                              const Rect.fromLTWH(
+                                0,
+                                0,
+                                220,
+                                60,
+                              ),
+                            ),
                         ),
-                        speed: const Duration(milliseconds: 90),
-                      ),
-                      TypewriterAnimatedText(
-                        'Building seamless cross-platform apps 🚀',
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: isSmall ? 20 : 24,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        speed: const Duration(milliseconds: 90),
-                      ),
-                      TypewriterAnimatedText(
-                        'Building seamless Native apps 🚀',
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: isSmall ? 20 : 24,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        speed: const Duration(milliseconds: 90),
                       ),
                     ],
                   ),
+                ),
 
-                  const SizedBox(height: 28),
+                const SizedBox(height: 15),
 
-                  SizedBox(
-                    width: isSmall ? double.infinity : null,
-                    child: Wrap(
-                      alignment:
-                      isSmall ? WrapAlignment.center : WrapAlignment.start,
-                      spacing: 12,
-                      runSpacing: 12,
-                      children: [
-                        ElevatedButton.icon(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.indigoAccent,
-                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                          onPressed: () => _openUrl('mailto:kjhamja77@gmail.com'),
-                          icon: const Icon(Icons.email_outlined, size: 20,color: Colors.white,),
-                          label: const Text('Contact Me', style: TextStyle(fontSize: 16,color: Colors.white)),
+                // Designation
+                const Text(
+                  'Mobile Application Developer',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: white,
+                    fontSize: 21,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+
+                const SizedBox(height: 15),
+
+                // Description
+                const Text(
+                  'Building seamless cross-platform mobile '
+                      'applications using Flutter & Android that solve '
+                      'real-world problems and deliver exceptional '
+                      'user experiences.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: muted,
+                    fontSize: 16,
+                    height: 1.6,
+                  ),
+                ),
+
+                const SizedBox(height: 26),
+
+                // Buttons
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  spacing: 12,
+                  runSpacing: 12,
+                  children: [
+                    // Contact
+                    Container(
+                      height: 50,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            primaryPurple,
+                            primaryBlue,
+                          ],
                         ),
-                        OutlinedButton.icon(
-                          style: OutlinedButton.styleFrom(
-                            side: const BorderSide(color: Colors.indigoAccent),
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl(
+                            'mailto:kjhamja77@gmail.com',
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.transparent,
+                          shadowColor: Colors.transparent,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
                           ),
-                          onPressed: () => _openUrl('https://drive.google.com/file/d/1Wl1-QgsCWHMgscu208e4FKPpJtibAiy9/view?usp=sharing'),
-                          icon: const Icon(Icons.download_outlined, size: 20),
-                          label: const Text('Download CV', style: TextStyle(fontSize: 16)),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        icon: const Icon(
+                          Icons.email_outlined,
+                          color: Colors.white,
+                          size: 19,
+                        ),
+                        label: const Text(
+                          'Contact Me',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    // CV
+                    SizedBox(
+                      height: 50,
+                      child: OutlinedButton.icon(
+                        onPressed: () {
+                          _openUrl(
+                            'https://drive.google.com/file/d/13tbm5Ayzp9X-QU8t62CzbjBV459Xm8D_/view?usp=sharing',
+                          );
+                        },
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: white,
+                          side: BorderSide(
+                            color: primaryBlue.withValues(alpha: .8),
+                          ),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        icon: const Icon(
+                          Icons.download_outlined,
+                          size: 19,
+                        ),
+                        label: const Text(
+                          'Download CV',
+                          style: TextStyle(
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 50),
+
+            // =========================================================
+            // MOBILE PROFILE
+            // =========================================================
+
+            SizedBox(
+              width: 340,
+              height: 390,
+              child: Stack(
+                alignment: Alignment.center,
+                clipBehavior: Clip.none,
+                children: [
+                  // Soft glow behind image
+                  Container(
+                    width: 245,
+                    height: 320,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(35),
+                      boxShadow: [
+                        BoxShadow(
+                          color: primaryBlue.withValues(alpha: .22),
+                          blurRadius: 80,
+                          spreadRadius: 15,
                         ),
                       ],
                     ),
                   ),
+
+                  // PROFILE IMAGE ONLY
+                  Container(
+                    width: 350,
+                    height: 330,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(28),
+                      boxShadow: [
+                        BoxShadow(
+                          color: primaryPurple.withValues(alpha: .25),
+                          blurRadius: 35,
+                        ),
+                      ],
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(28),
+                      child: Image.asset(
+                        'assets/profile.png',
+                        fit: BoxFit.cover,
+                        alignment: const Alignment(0, -0.05),
+                      ),
+                    ),
+                  ),
                 ],
               ),
+            ),
+          ],
+        )
 
-              SizedBox(width: isSmall ? 0 : 60, height: isSmall ? 40 : 0),
+        // =============================================================
+        // DESKTOP / TABLET
+        // =============================================================
 
-              if (!isSmall)
-                Flexible(
-                  flex: 1,
-                  child: Center(
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 600),
-                      height: 350,
-                      width: 420,
+            : Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // ========================================================
+            // LEFT CONTENT
+            // ========================================================
+
+            Expanded(
+              flex: 11,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Hello
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 17,
+                      vertical: 9,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF090D24),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: primaryPurple.withValues(alpha: .5),
+                      ),
+                    ),
+                    child: const Text(
+                      "👋 Hello, I'm",
+                      style: TextStyle(
+                        color: white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 23),
+
+                  // Name
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: RichText(
+                      text: TextSpan(
+                        children: [
+                          const TextSpan(
+                            text: 'Halith ',
+                            style: TextStyle(
+                              color: white,
+                              fontSize: 65,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: -2.5,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Hamja',
+                            style: TextStyle(
+                              fontSize: 65,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: -2.5,
+                              foreground: Paint()
+                                ..shader = const LinearGradient(
+                                  colors: [
+                                    primaryPurple,
+                                    primaryBlue,
+                                  ],
+                                ).createShader(
+                                  const Rect.fromLTWH(
+                                    0,
+                                    0,
+                                    300,
+                                    70,
+                                  ),
+                                ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 17),
+
+                  // Title
+                  const Text(
+                    'Mobile Application Developer',
+                    style: TextStyle(
+                      color: white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+
+                  const SizedBox(height: 15),
+
+                  // Description
+                  const SizedBox(
+                    width: 600,
+                    child: Text(
+                      'Building seamless cross-platform mobile '
+                          'applications using Flutter & Android that solve '
+                          'real-world problems and deliver exceptional '
+                          'user experiences.',
+                      style: TextStyle(
+                        color: muted,
+                        fontSize: 17,
+                        height: 1.6,
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 27),
+
+                  // Buttons
+                  Row(
+                    children: [
+                      // Contact
+                      Container(
+                        height: 52,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              primaryPurple,
+                              primaryBlue,
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: primaryBlue.withValues(alpha: .2),
+                              blurRadius: 20,
+                            ),
+                          ],
+                        ),
+                        child: ElevatedButton.icon(
+                          onPressed: () {
+                            _openUrl(
+                              'mailto:kjhamja77@gmail.com',
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.transparent,
+                            shadowColor: Colors.transparent,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 24,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          icon: const Icon(
+                            Icons.email_outlined,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                          label: const Text(
+                            'Contact Me',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(width: 14),
+
+                      // Download CV
+                      SizedBox(
+                        height: 52,
+                        child: OutlinedButton.icon(
+                          onPressed: () {
+                            _openUrl(
+                              'https://drive.google.com/file/d/13tbm5Ayzp9X-QU8t62CzbjBV459Xm8D_/view?usp=sharing',
+                            );
+                          },
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: white,
+                            side: BorderSide(
+                              color: primaryBlue.withValues(alpha: .8),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 24,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          icon: const Icon(
+                            Icons.download_outlined,
+                            size: 20,
+                          ),
+                          label: const Text(
+                            'Download CV',
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+
+            Expanded(
+              flex: 8,
+              child: Center(
+                child: Stack(
+                  alignment: Alignment.center,
+                  clipBehavior: Clip.none,
+                  children: [
+                    Container(
+                      width: isTablet ? 350 : MediaQuery.of(context).size.width*0.8,
+                      height: isTablet ? 390 : MediaQuery.of(context).size.height*0.7,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(30),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.indigoAccent.withValues(alpha: 0.3),
-                            blurRadius: 30,
+                            color: primaryPurple.withValues(alpha: .2),
+                            blurRadius: 35,
                             spreadRadius: 2,
                           ),
                         ],
                       ),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child:
-                        Image.network(
-                          'https://cdnl.iconscout.com/lottie/premium/thumb/developer-working-on-computer-animation-gif-download-3618988.gif',
+                        borderRadius: BorderRadius.circular(30),
+                        child: Image.asset(
+                          'assets/profile.png',
                           fit: BoxFit.cover,
-                          errorBuilder: (c, _, __) => Container(color: Colors.grey[900]),
+                          alignment: const Alignment(0, -0.05),
+                          errorBuilder: (
+                              context,
+                              error,
+                              stackTrace,
+                              ) {
+                            return Container(
+                              color: const Color(0xFF0A0D20),
+                              child: const Icon(
+                                Icons.person,
+                                color: Colors.white,
+                                size: 90,
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
-            ],
-          ),
-        ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
-
 
   Widget _aboutSection() {
     return LayoutBuilder(
