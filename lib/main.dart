@@ -157,6 +157,34 @@ const List<String> kCategories = [
 
 final List<Map<String, dynamic>> kProjects = [
   {
+    'title': 'KJ Expense Tracker',
+    'category': 'Finance',
+    'subtitle': 'Personal Finance Application',
+    'tagline': 'Know where every dirham goes.',
+    'description':
+    'A Flutter-based personal expense tracker that records bank and cash spending in one place, with period filters, date ranges and a clean light and dark interface.',
+    'brief':
+    "KJ Expense Tracker is a personal finance app built with Flutter for my own daily use, designed to make tracking money simple and clear. It brings bank transactions and cash expenses into a single list, picks up transactions from bank SMS alerts, and lets me add cash purchases manually with the amount, date, time and notes. Spending can be viewed by today, week or month, or filtered with a custom date range, so I can see exactly where my money goes. The app follows a consistent design system with light and dark themes, an animated splash screen and reusable UI components, built for a smooth and distraction-free experience.",
+    'image': 'assets/kj_splash.png',
+    'screenshots': [
+      'assets/screenshots/kjE1.jpeg',
+      'assets/screenshots/kjE2.jpeg',
+      'assets/screenshots/kjE3.jpeg',
+      'assets/screenshots/kjE4.jpeg',
+      'assets/screenshots/kjE5.jpeg',
+      'assets/screenshots/kjE6.jpeg',
+      'assets/screenshots/kjE7.jpeg',
+      'assets/screenshots/kjE8.jpeg',
+    ],
+    'techStack': [
+      'assets/flutter.png',
+      'assets/git.png',
+    ],
+    'github': '',
+    'playstore': '',
+    'appstore': '',
+  },
+  {
     'title': 'Kardosi',
     'category': 'E-Commerce',
     'subtitle': 'E-Commerce Application',
@@ -1852,26 +1880,29 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                 ),
               ),
               const SizedBox(height: 24),
-              AnimatedSwitcher(
-                duration: const Duration(milliseconds: 300),
-                child: Wrap(
-                  key: ValueKey(_filter),
-                  spacing: 30,alignment: WrapAlignment.spaceEvenly,
-                  runSpacing: 30,
-                  children: [
-                    for (int i = 0; i < filtered.length; i++)
-                      Reveal(
-                        delay: Duration(milliseconds: (i % 3) * 120),
-                        distance: 50,
-                        child: _ProjectCard(
-                          p: filtered[i],
-                          width: cardW,
-                          height: cardH,
-                          onOpenUrl: _openUrl,
-                          onTap: () => _openProject(filtered[i]),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 300),
+                  child: Wrap(
+                    key: ValueKey(_filter),
+                    spacing: 30,alignment: WrapAlignment.spaceBetween,
+                    runSpacing: 30,
+                    children: [
+                      for (int i = 0; i < filtered.length; i++)
+                        Reveal(
+                          delay: Duration(milliseconds: (i % 3) * 120),
+                          distance: 50,
+                          child: _ProjectCard(
+                            p: filtered[i],
+                            width: cardW,
+                            height: cardH,
+                            onOpenUrl: _openUrl,
+                            onTap: () => _openProject(filtered[i]),
+                          ),
                         ),
-                      ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
